@@ -3,24 +3,24 @@
 @section('main_content')
 <main>
     <h1>
-        {{$comic->title}}
+        {{$comics->title}}
     </h1>
 
     <div>
         <div>
-            <img src="{{$comic->thumb}}" alt="{{$comic->title}}">
+            <img src="{{$comics->thumb}}" alt="{{$comics->title}}">
             <div>
                 <div>
-                    <strong>Serie:</strong> {{$comic->series}}
+                    <strong>Serie:</strong> {{$comics->series}}
                 </div>
                 <div>
-                    <strong>Tipo:</strong> {{$comic->type}}
+                    <strong>Tipo:</strong> {{$comics->type}}
                 </div>
                 <div>
-                    <strong>Titolo:</strong> {{$comic->sale_date}}
+                    <strong>Titolo:</strong> {{$comics->sale_date}}
                 </div>
                 <div>
-                    <strong>Prezzo:</strong> {{$comic->price}}
+                    <strong>Prezzo:</strong> {{$comics->price}}
                 </div>
             </div>
         </div>
@@ -28,7 +28,7 @@
             
             <div>
                 <div>
-                    <strong>Descrizione:</strong> {{$comic->description}}
+                    <strong>Descrizione:</strong> {{$comics->description}}
                 </div>
             </div>
         </div>
