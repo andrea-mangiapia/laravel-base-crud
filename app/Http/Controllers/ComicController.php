@@ -108,7 +108,7 @@ class ComicController extends Controller
     {
         // Prima di tutto valido i dati
         $request->validate($this->getValidationRules()); 
-        
+
         $form_data = $request->all();
 
         $comic_to_update = Comic::findOrFail($id);
@@ -125,7 +125,10 @@ class ComicController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $comic_to_delete = Comic::findOrFail($id);
+        $comic_to_delete->delete();
+
+        return redirect()->route('comics.index');
     }
 
     protected function getValidationRules() {
